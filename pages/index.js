@@ -1,15 +1,9 @@
-/*import React, { Component } from "react"
+import Head from 'next/head'
 
-export default class extends Component {
-  render () {
-    return (
-      <div>Your Next.js App</div>
-    )
-  }
-}*/
+import Container from '../components/Container'
 
-const Page = () => {
-    return <div> Hello </div>
+const Index = () => {
+    return (<Container>  </Container>)
 }
 
-export default Page
+export default Index
