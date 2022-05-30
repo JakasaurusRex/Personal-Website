@@ -1,9 +1,12 @@
 import Head from 'next/head'
 
-import Container from '../components/Container'
+import NavBar from '../components/NavBar'
 
-const Index = () => {
-    return (<Container>  </Container>)
+export default function Index() {
+    return (
+		<>
+			<NavBar> </NavBar>
+		</>
+	)
 }
 
-export default Index
