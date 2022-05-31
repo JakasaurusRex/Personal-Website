@@ -9,7 +9,6 @@ const Main = ({children, router}) => {
 			<title> Jake Torres | Personal Website </title>
 		  </Head>
 
-		  <Container maxW=>
 		</Box>
 	)
 }
