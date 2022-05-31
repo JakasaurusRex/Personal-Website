@@ -1,4 +1,5 @@
 //Importing things that I will use
+//Anchor link is what allows the scrolling between different parts of the page, look it up "react anchor link smooth scroll" for more info
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import React from 'react'
 import {EmailIcon} from '@chakra-ui/icons'
