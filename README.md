@@ -6,3 +6,6 @@ Made this personal website in a week! Learned React.js and Next.js to make it. U
 Check it out here https://www.jaketorres.tech/
 
 Comments on each component and file in pages explain what each part does. Documentation on Chakra's website helped the most in making this website. Most of the react stuff behind the scenes is setup by default. 
+
+
+Website still doesn't really work on mobile, that is what I am going to fix next.
