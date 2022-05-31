@@ -14,7 +14,7 @@ function Feature({title, time, desc, imgUrl, webLink, ...rest}) {
 	return (
 		<Box backgroundColor="white" p={8} shadow="dark-lg" borderWidth='1px' {...rest}>
 			<Flex> 
-				<Box p={5}><Image fit="contain" boxSize="75px" src={imgUrl} /> </Box>
+				<Box p={5}><Image fit="contain" boxSize="7em" src={imgUrl} /> </Box>
 				<Box p={5}>
 					<Link href={webLink}><Heading fontSize='xl'>{title}</Heading></Link>
 					<Heading size="sm" fontWeight="400" fontStyle="italic">{time}</Heading>
@@ -27,7 +27,7 @@ function Feature({title, time, desc, imgUrl, webLink, ...rest}) {
 
 const Experience = () => {
 	return (<section id="experience">
-		<Flex p={5} justifyContent="center" backgroundColor="#ff4066">	
+		<Flex shadow="dark-lg" p={5} justifyContent="center" backgroundColor="#ff4066">	
 			<Stack maxWidth="60%" justifyContent="center" direction="column">
 				<Box mb={5}><Heading justifyContent="center" align="center" color="white"> Experience </Heading></Box>
 				<Feature title="Meta University Internship" desc="I will be working on a team to develop an iOS app using Meta's infastructure and tools." time="June 2022 - August 2022" imgUrl="/Meta1.png" webLink="https://www.metacareers.com/careerprograms/pathways/metauniversity" />
