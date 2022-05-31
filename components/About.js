@@ -1,18 +1,13 @@
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import React from 'react'
-import {EmailIcon} from '@chakra-ui/icons'
 
 import {Fade} from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
 import {
-     Flex,
-     Box,
-     Button,
-     Heading,
-	 AspectRatio,
-	 Image,
-	 Link
+    Flex,
+    Box,
+    Heading,
+	Link
 } from '@chakra-ui/react' 
 
 const fadeImages = [
@@ -40,20 +35,20 @@ const fadeImages = [
 ];
 
 const Slideshow = () => {
-  return (
-    <div className="slide-container">
-      <Fade>
-        {fadeImages.map((fadeImage, index) => (
-          <div className="each-fade" key={index}>
-            <div className="image-container">
-              <img src={fadeImage.url} />
-            </div>
-            <h2>{fadeImage.caption}</h2>
-          </div>
-        ))}
-      </Fade>
-    </div>
-  )
+	return (
+		<div className="slide-container">
+			<Fade>
+				{fadeImages.map((fadeImage, index) => (
+					<div className="each-fade" key={index}>
+						<div className="image-container">
+							<img src={fadeImage.url} />
+						</div>
+						<h2>{fadeImage.caption}</h2>
+					</div>
+				))}
+			</Fade>
+		</div>
+	)
 }
 
 const About = () => {

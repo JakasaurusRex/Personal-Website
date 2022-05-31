@@ -9,10 +9,3 @@ import {
 	Spacer
 } from '@chakra-ui/react'
 
-const Contact = () => {
-	return (
-
-	)
-}
-
-export default Contact

@@ -3,12 +3,12 @@ import React from 'react'
 import {EmailIcon} from '@chakra-ui/icons'
 
 import {
-     Flex,
-     Box,
-     Button,
-	 Heading,
-	 Spacer,
-	 Image
+	Flex,
+	Box,
+	Button,
+	Heading,
+	Spacer,
+	Image
 } from '@chakra-ui/react'
 
 const NavBar = () => {

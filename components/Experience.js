@@ -3,7 +3,6 @@ import React from 'react'
 import {
 	Flex,
 	Box,
-	Button,
 	Heading,
 	Stack,
 	Image,

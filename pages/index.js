@@ -1,5 +1,3 @@
-import Head from 'next/head'
-
 import NavBar from '../components/NavBar'
 import About from '../components/About'
 import Experience from '../components/Experience'
