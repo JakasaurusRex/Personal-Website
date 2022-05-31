@@ -36,7 +36,7 @@ const Projects = () => {
 				<Flex justifyContent="center" align="center">
 					<Card p={4} imgUrl="/Webby.png" projName="Personal Website" projDesc="Made this website! Learned React.js and Next.js and used chakra-ui to produce this. Hosted using vercel!" projLink="https://github.com/JakasaurusRex/PersonalWebsitePart3" /> 
 					<Spacer />
-					<Card p={4} imgUrl="/Faux.png" projName="Faux - 7th Place Brackeys 4 Game Jam" projDesc="Made a game in week. Placed 7th in the world" projLink="https://jakasaurus.itch.io/faux" />
+					<Card p={4} imgUrl="/Faux.png" projName="Faux - 7th Place Brackeys 4 Game Jam" projDesc="Made a game in week using C#, FMOD, Monogame and .NET for a game jam hosted by the youtuber Brackeys. Placed 7th in the world." projLink="https://jakasaurus.itch.io/faux" />
 				</Flex>
 			</Stack>
 		</section>
