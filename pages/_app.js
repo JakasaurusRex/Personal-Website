@@ -2,9 +2,14 @@
 import {ChakraProvider} from '@chakra-ui/react'
 import customTheme from '../styles/theme'
 
+import Head from 'next/head'
+
 function MyApp({Component, pageProps}) {
 	return (
 		<ChakraProvider resetCSS theme={customTheme}>
+			<Head>
+				<link rel="shortcut icon" href="/favicon.ico" />
+			</Head>
 			<Component {...pageProps}/>
 		</ChakraProvider>
 	)
