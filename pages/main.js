@@ -1,5 +1,6 @@
 import Head from 'next/Head'
-import { Box,} from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
+import React from 'react'
 
 const Main = () => {
 	return (
@@ -12,3 +13,5 @@ const Main = () => {
 		</Box>
 	)
 }
+
+export default  Main
