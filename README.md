@@ -9,3 +9,5 @@ Comments on each component and file in pages explain what each part does. Docume
 
 
 Website still doesn't really work on mobile, that is what I am going to fix next.
+
+Website was also produced all in a unix terminal using git and vim.
