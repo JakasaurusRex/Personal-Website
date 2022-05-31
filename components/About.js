@@ -20,12 +20,6 @@ const fadeImages = [
 		url: '/Roaree.png'
 	},
 	{
-		url: '/Aquarium1.png'
-	},
-	{
-		url: '/Beach1.png'
-	},
-	{
 		url: '/Beach2.png'
 	},
 	{
