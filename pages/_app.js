@@ -8,7 +8,11 @@ function MyApp({Component, pageProps}) {
 	return (
 		<ChakraProvider resetCSS theme={customTheme}>
 			<Head>
-				<link rel="shortcut icon" href="/favicon.ico" />
+				<title> Jake's Personal Website </title>
+				<link rel="shortcut icon" href="/images/favicon.ico" />
+				<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+				<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+				<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
 			</Head>
 			<Component {...pageProps}/>
 		</ChakraProvider>
