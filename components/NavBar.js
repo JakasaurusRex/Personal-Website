@@ -6,12 +6,17 @@ import {
      Flex,
      Box,
      Button,
-	 Heading
+	 Heading,
+	 Spacer,
+	 Image
 } from '@chakra-ui/react'
 
 const NavBar = () => {
 	return (
-			<Flex minWidth='max-content' alignItems='center' justify='flex-end' py={2} mt={4} mb={[0,0,8]} px={[2,8,8]} mx="auto">
+			<Flex minWidth='full' alignItems='center' justify='flex-end' py={8} mt={0} mb={0,0,0} px={[2,8,8]} mx="auto">
+				<Box py='2' px='4'> <Image fit="cover" borderRadius='full' boxSize='10em' src="/Nicer.jpeg" /> </Box>
+				<Box py='2' px='4'><Heading size='lg'> Jake Torres </Heading><Heading size='sm' color='gray'>Programmer and Computer Scientist</Heading></Box>
+				<Spacer />
 				<Box py='2' px ='4'>
 					<AnchorLink href='#about'> <Heading size='md'>About </Heading></AnchorLink>
 				</Box>
@@ -25,7 +30,7 @@ const NavBar = () => {
 					<AnchorLink href='#contact'> <Heading size='md'>Contact </Heading></AnchorLink>
 				</Box>
 				<Button leftIcon={<EmailIcon />} variant='solid' colorScheme='orange'>
-					<a className='bg-orange text-white rounded-lg ' href=''> <Heading size='md'> Resume  </Heading></a>
+					<a href='/Resume.pdf'> <Heading size='md'> Resume  </Heading></a>
 				</Button>
 			</Flex>
 	)
