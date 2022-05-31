@@ -1,4 +1,6 @@
+//Importing stuff
 import React from 'react'
+
 import {
 	Flex,
 	Box,
@@ -9,10 +11,12 @@ import {
 	Stack
 } from '@chakra-ui/react'
 
+//Importing icons used as links
 import { BsLinkedin } from 'react-icons/bs'
 import {MdEmail} from 'react-icons/md'
 import {BsGithub} from 'react-icons/bs'
 
+//Contact function
 const Contact = () => {
 	return (
 		<section id="contact">
@@ -36,4 +40,5 @@ const Contact = () => {
 	)
 }
 
+//Exporting Contact
 export default Contact

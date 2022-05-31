@@ -1,5 +1,7 @@
+//Importing stuff
 import React from 'react'
 
+//Importing stuff for slideshow
 import {Fade} from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 
@@ -10,6 +12,7 @@ import {
 	Link
 } from '@chakra-ui/react' 
 
+//Creating an array for all the images in the slideshow, if you wanna add more, add them here
 const fadeImages = [
 	{
 		url: '/Roaree.png'
@@ -34,6 +37,7 @@ const fadeImages = [
 	},
 ];
 
+//Function for slideshow, called when creating About
 const Slideshow = () => {
 	return (
 		<div className="slide-container">
@@ -51,6 +55,7 @@ const Slideshow = () => {
 	)
 }
 
+//About function, calls slideshow
 const About = () => {
 	return (
 		<section id="about"><Flex minWidth="full" backgroundColor="#faf8f7">
@@ -66,4 +71,5 @@ const About = () => {
 	)
 }
 
+//Exporting About
 export default About

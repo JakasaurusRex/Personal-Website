@@ -1,3 +1,4 @@
+//Importing stuff
 import React from 'react'
 
 import {
@@ -6,6 +7,7 @@ import {
 	Heading
 } from '@chakra-ui/react'
 
+//Footer function
 const Footer = () => {
 	return (
 		<Flex backgroundColor="white" justifyContent="center" align="center">
@@ -14,4 +16,5 @@ const Footer = () => {
 	)
 }
 
+//Exporting Footer
 export default Footer

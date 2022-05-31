@@ -1,3 +1,4 @@
+//Importing stuff
 import React from 'react'
 
 import {
@@ -10,6 +11,7 @@ import {
 	Link
 } from '@chakra-ui/react'
 
+//Creating function to add each card seen as an experience, called in Experience function for each job or past experience I have had
 function Feature({title, time, desc, imgUrl, webLink, ...rest}) {
 	return (
 		<Box backgroundColor="white" p={8} shadow="dark-lg" borderWidth='1px' {...rest}>
@@ -25,6 +27,7 @@ function Feature({title, time, desc, imgUrl, webLink, ...rest}) {
 	)
 }
 
+//Experience function
 const Experience = () => {
 	return (<section id="experience">
 		<Flex shadow="dark-lg" p={5} justifyContent="center" backgroundColor="#ff4066">	
@@ -40,4 +43,5 @@ const Experience = () => {
 	)
 }
 
+//Exporting Experience
 export default Experience

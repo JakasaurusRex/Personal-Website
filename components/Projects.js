@@ -1,3 +1,4 @@
+//Importing stuff
 import React from 'react'
 
 import {
@@ -11,6 +12,7 @@ import {
 	Stack
 } from '@chakra-ui/react'
 
+//Card function for each project I have worked on. Kinda based on example on the chakra ui website
 function Card({imgUrl, projName, projDesc, projLink, ...rest}) {
 	return (
 		<Box maxW='sm' borderRadius='lg' shadow="dark-lg">
@@ -28,6 +30,7 @@ function Card({imgUrl, projName, projDesc, projLink, ...rest}) {
 	)
 }
 
+//Project function
 const Projects = () => {
 	return (
 		<section id="projects">
@@ -43,4 +46,5 @@ const Projects = () => {
 	)
 }
 
+//Exporting project
 export default Projects

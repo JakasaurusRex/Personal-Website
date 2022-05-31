@@ -1,3 +1,4 @@
+//Importing things that I will use
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import React from 'react'
 import {EmailIcon} from '@chakra-ui/icons'
@@ -11,6 +12,7 @@ import {
 	Image
 } from '@chakra-ui/react'
 
+//Creating NavBar function
 const NavBar = () => {
 	return (
 			<Flex minWidth='full' alignItems='center' justify='flex-end' py={8} mt={0} mb={0,0,0} px={[2,8,8]} mx="auto">
@@ -36,4 +38,5 @@ const NavBar = () => {
 	)
 }
 
+//Exporting NavBar
 export default NavBar
