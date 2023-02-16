@@ -1,6 +1,7 @@
 //This is needed for chakra ui and react, overrides the theme for Chakra to add my own font sizes and weights
 import {ChakraProvider} from '@chakra-ui/react'
 import customTheme from '../styles/theme'
+import {Analytics} from '@vercel/analytics/react';
 
 import Head from 'next/head'
 
@@ -15,6 +16,7 @@ function MyApp({Component, pageProps}) {
 				<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
 			</Head>
 			<Component {...pageProps}/>
+			<Analytics />
 		</ChakraProvider>
 	)
 }
