@@ -9,6 +9,7 @@ function MyApp({Component, pageProps}) {
 	return (
 		<ChakraProvider resetCSS theme={customTheme}>
 			<Head>
+				<meta name="viewport" content = "width=device-width, initial-scale=1" />
 				<title> Jake's Personal Website </title>
 				<link rel="shortcut icon" href="/images/favicon.ico" />
 				<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
