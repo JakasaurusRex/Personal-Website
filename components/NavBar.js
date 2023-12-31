@@ -18,7 +18,7 @@ const NavBar = () => {
 	return (
 			<Flex minWidth='full' alignItems='center' justify='flex-end' py={8} mt={0} mb={0,0,0} px={[2,8,8]} mx="auto">
 				<Box py='2' px='4'> <Image fit="cover" borderRadius='full' boxSize='10em' src="/Nicer.jpeg" /> </Box>
-				<Box py='2' px='4'><Heading size='lg'> Jake Torres </Heading><Heading size='sm' color='gray'>Programmer and Computer Scientist</Heading></Box>
+				<Box py='2' px='4'><Heading size='lg'> Jake Torres </Heading><Heading size='sm' color='gray'>Creative Engineer and Programmer</Heading></Box>
 				<Spacer />
 				<Box py='2' px ='4'>
 					<AnchorLink href='#about'> <Heading size='md'>About </Heading></AnchorLink>
