@@ -1,5 +1,6 @@
 //Importing stuff
 import React from 'react'
+import Masonry from 'react-masonry-css'
 
 import {
 	Box,
@@ -15,7 +16,7 @@ function Feature({title, location, time, desc, descContent, imgUrl, webLink, ...
 	return (
 		<Box 
 			backgroundColor="white" 
-			p={6} 
+			p={4} 
 			shadow="dark-lg" 
 			borderRadius='lg'
 			transition="all 0.2s"
@@ -24,13 +25,14 @@ function Feature({title, location, time, desc, descContent, imgUrl, webLink, ...
 				shadow: "2xl"
 			}}
 			height="fit-content"
+			mb={{ base: 4, md: 6 }}
 			{...rest}
 		>
-			<Stack spacing={4}>
+			<Stack spacing={3}>
 				<Box 
 					position="relative" 
 					width="100%"
-					height="150px"
+					height="120px"
 					overflow="hidden"
 					borderRadius="md"
 				>
@@ -76,6 +78,11 @@ function Feature({title, location, time, desc, descContent, imgUrl, webLink, ...
 
 //Experience function
 const Experience = () => {
+	const breakpointCols = {
+		default: 2,
+		768: 1
+	};
+
 	return (
 		<section id="experience">
 			<Box 
@@ -83,9 +90,9 @@ const Experience = () => {
 				backgroundColor="#ff4066"
 				minH="100vh"
 			>
-				<Stack spacing={8} align="center">
+				<Stack spacing={4} align="center">
 					<Heading 
-						mb={{ base: 4, md: 6 }} 
+						mb={{ base: 2, md: 4 }} 
 						color="white" 
 						fontSize={{ base: "2xl", md: "3xl" }}
 						textAlign="center"
@@ -97,16 +104,13 @@ const Experience = () => {
 						width="100%"
 						maxWidth="1200px"
 						px={{ base: 2, md: 4 }}
-						sx={{
-							columnCount: { base: 1, md: 2 },
-							columnGap: { base: "20px", md: "30px" },
-							"& > div": {
-								breakInside: "avoid",
-								marginBottom: { base: "20px", md: "30px" }
-							}
-						}}
 					>
-						<Box>
+						<Masonry
+							breakpointCols={breakpointCols}
+							className="masonry-grid"
+							columnClassName="masonry-grid_column"
+							style={{ display: 'flex' }}
+						>
 							<Feature 
 								title="Figma Software Engineer" 
 								location="San Francisco, CA" 
@@ -115,8 +119,6 @@ const Experience = () => {
 								imgUrl="/figma.png" 
 								webLink="https://www.figma.com/" 
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Riot Games Software Engineering Internship - Valorant Core Gameplay" 
 								location="Los Angeles, CA" 
@@ -125,8 +127,6 @@ const Experience = () => {
 								imgUrl="/Riot.jpg" 
 								webLink="https://www.riotgames.com/en" 
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Advanced Programming in C Teaching Assistant - CS@Columbia University" 
 								location="New York, NY" 
@@ -135,8 +135,6 @@ const Experience = () => {
 								imgUrl="/CSColumbia.png" 
 								webLink="https://www.cs.columbia.edu/"
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Intro to Python Teaching Assistant - CS@Columbia University" 
 								location="New York, NY" 
@@ -155,8 +153,6 @@ const Experience = () => {
 								imgUrl="/CSColumbia.png" 
 								webLink="https://www.cs.columbia.edu/"
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Operating Systems Teaching Assistant - CS@Columbia University" 
 								location="New York, NY" 
@@ -165,8 +161,6 @@ const Experience = () => {
 								imgUrl="/CSColumbia.png" 
 								webLink="https://www.cs.columbia.edu/"
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="VISER - Columbia Graphics and User Interfaces Researcher" 
 								location="New York, NY" 
@@ -175,8 +169,6 @@ const Experience = () => {
 								imgUrl="/CSColumbia.png" 
 								webLink="https://graphics.cs.columbia.edu/home" 
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Microsoft Software Engineering Internship" 
 								location="Redmond and Seattle, WA" 
@@ -185,8 +177,6 @@ const Experience = () => {
 								imgUrl="/MS1.png" 
 								webLink="https://www.microsoft.com" 
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Meta/Facebook University Internship" 
 								location="Menlo Park, CA" 
@@ -195,8 +185,6 @@ const Experience = () => {
 								imgUrl="/Meta1.png" 
 								webLink="https://www.metacareers.com/careerprograms/pathways/metauniversity" 
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Microsoft TEALs Volunteer" 
 								location="Miami, FL" 
@@ -205,8 +193,6 @@ const Experience = () => {
 								imgUrl="/MS1.png" 
 								webLink="https://www.microsoft.com/en-us/teals"
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Code Ninjas Sensei" 
 								location="Broomfield, CO" 
@@ -215,8 +201,6 @@ const Experience = () => {
 								imgUrl="/CN2.png" 
 								webLink="https://www.codeninjas.com/" 
 							/>
-						</Box>
-						<Box>
 							<Feature 
 								title="Colorado School of Mines - High School Intern" 
 								location="Golden, CO" 
@@ -225,10 +209,22 @@ const Experience = () => {
 								imgUrl="/CSMines1.jpeg" 
 								webLink="https://cs.mines.edu/csminesinterns/"
 							/>
-						</Box>
+						</Masonry>
 					</Box>
 				</Stack>
 			</Box>
+
+			<style jsx global>{`
+				.masonry-grid {
+					display: flex;
+					width: 100%;
+					margin-left: -24px;
+				}
+				.masonry-grid_column {
+					padding-left: 24px;
+					background-clip: padding-box;
+				}
+			`}</style>
 		</section>
 	)
 }

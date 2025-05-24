@@ -22,7 +22,7 @@ const Contact = () => {
 		<section id="contact">
 		<Flex backgroundColor="#faf8f7" justifyContent="center" align="center"> <Stack justifyContent="center" align="center" direction="column">
 			<Heading p={8} size="lg" color="black"> Thanks for visiting! </Heading>
-			<Heading size="md" color="gray" fontWeight={400}> If you would like to contact me you can reach out to me on LinkedIn or through email! You can also check out my GitHub! </Heading>
+			<Heading  p={4} size="md" color="gray" fontWeight={400}> If you would like to contact me you can reach out to me on LinkedIn or through email! You can also check out my GitHub! </Heading>
 			<Flex justifyContent="center" align="center">
 				<Link p={4} href="https://www.linkedin.com/in/jake-torres-3a50b2212/">
 					<Icon boxSize="2em" as={BsLinkedin}/>

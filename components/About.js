@@ -88,12 +88,14 @@ const Slideshow = () => {
 			<Box 
 				className="slide-container" 
 				width={{ base: "100%", md: "400px" }}
-				aspectRatio="1"
-				borderRadius="lg"
-				overflow="hidden"
-				shadow="md"
-				position="relative"
-				margin="0 auto"
+				sx={{
+					aspectRatio: "1",
+					borderRadius: "lg",
+					overflow: "hidden",
+					boxShadow: "md",
+					position: "relative",
+					margin: "0 auto"
+				}}
 			>
 				<img 
 					src={fadeImages[0].url} 
@@ -113,12 +115,14 @@ const Slideshow = () => {
 		<Box 
 			className="slide-container" 
 			width={{ base: "100%", md: "400px" }}
-			aspectRatio="1"
-			borderRadius="lg"
-			overflow="hidden"
-			shadow="md"
-			position="relative"
-			margin="0 auto"
+			sx={{
+				aspectRatio: "1",
+				borderRadius: "lg",
+				overflow: "hidden",
+				boxShadow: "md",
+				position: "relative",
+				margin: "0 auto"
+			}}
 		>
 			<Fade>
 				{fadeImages.map((fadeImage, index) => (
@@ -172,8 +176,10 @@ const About = () => {
 					>
 						<Box 
 							width={{ base: "100%", md: "400px" }}
-							aspectRatio="1"
-							margin={{ base: "0 auto", md: "0" }}
+							sx={{
+								aspectRatio: "1",
+								margin: { base: "0 auto", md: "0" }
+							}}
 						>
 							<Slideshow />	
 						</Box>
