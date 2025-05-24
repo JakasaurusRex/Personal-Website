@@ -2,18 +2,35 @@
 import {ChakraProvider} from '@chakra-ui/react'
 import customTheme from '../styles/theme'
 import {Analytics} from '@vercel/analytics/react';
-import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { useEffect } from 'react';
+import * as gtag from '../lib/gtag'
+import Head from 'next/head'
 
 function MyApp({Component, pageProps}) {
+	const router = useRouter()
+
 	useEffect(() => {
-		// This ensures the app is fully mounted before any client-side rendering
-		if (typeof window !== 'undefined') {
-			const loader = document.getElementById('globalLoader');
-			if (loader)
-				loader.style.display = 'none';
-		}
-	}, []);
+	  // Handle loading screen
+	  if (typeof window !== 'undefined') {
+		const loader = document.getElementById('globalLoader');
+		if (loader)
+		  loader.style.display = 'none';
+	  }
+  
+	  // Handle Google Analytics page views
+	  const handleRouteChange = (url) => {
+		gtag.pageview(url)
+	  }
+  
+	  // Subscribe to route changes
+	  router.events.on('routeChangeComplete', handleRouteChange)
+  
+	  // Cleanup subscription
+	  return () => {
+		router.events.off('routeChangeComplete', handleRouteChange)
+	  }
+	}, [router.events])
 
 	return (
 		<ChakraProvider theme={customTheme}>
