@@ -1,14 +1,14 @@
 // Importing the chakra ui stuff
 import {extendTheme} from '@chakra-ui/react'
 import {theme as chakraTheme} from '@chakra-ui/react'
-import {createBreakpoints} from '@chakra-ui/theme-tools'
 
-const breakpoints = createBreakpoints({
+const breakpoints = {
+	base: "0em",
 	sm: "40em",
 	md: "52em",
 	lg: "64em",
-	lg: "62em",
-})
+	xl: "80em",
+}
 
 //Array holding all of the theme items we are overriding
 const overrides = {

@@ -10,32 +10,86 @@ import {
 	Button,
 	Heading,
 	Spacer,
-	Image
+	Image,
+	Stack,
+	Link,
 } from '@chakra-ui/react'
+
+const NavLink = ({ href, children }) => (
+	<AnchorLink href={href}>
+		<Heading 
+			size='md' 
+			_hover={{ color: 'orange.500' }}
+			transition="color 0.2s"
+		>
+			{children}
+		</Heading>
+	</AnchorLink>
+)
 
 //Creating NavBar function
 const NavBar = () => {
 	return (
-			<Flex minWidth='full' alignItems='center' justify='flex-end' py={8} mt={0} mb={0,0,0} px={[2,8,8]} mx="auto">
-				<Box py='2' px='4'> <Image fit="cover" borderRadius='full' boxSize='10em' src="/Nicer.jpeg" /> </Box>
-				<Box py='2' px='4'><Heading size='lg'> Jake Torres </Heading><Heading size='sm' color='gray'>Creative Engineer and Programmer</Heading></Box>
+		<Box>
+			<Flex
+				w="100%"
+				px={{ base: 4, md: 8 }}
+				py={4}
+				align="center"
+				bg="white"
+				shadow="sm"
+			>
+				{/* Logo and Name - Always visible */}
+				<Stack direction={{ base: "column", md: "row" }} align="center" spacing={{ base: 2, md: 4 }}>
+					<Image 
+						fit="cover" 
+						borderRadius='full' 
+						boxSize={{ base: '80px', md: '100px' }} 
+						src="/NewPFP.png" 
+						alt="Jake Torres"
+					/>
+					<Box textAlign={{ base: "center", md: "left" }}>
+						<Heading size='lg'>Jake Torres</Heading>
+						<Heading size='sm' color='gray'>Creative Engineer and Programmer @ Figma</Heading>
+					</Box>
+				</Stack>
+
 				<Spacer />
-				<Box py='2' px ='4'>
-					<AnchorLink href='#about'> <Heading size='md'>About </Heading></AnchorLink>
-				</Box>
-				<Box py='2' px='4'>
-					<AnchorLink href='#experience'> <Heading size='md'>Experience </Heading></AnchorLink>
-				</Box>
-				<Box py='2' px='4'>
-					<AnchorLink href='#projects'> <Heading size='md'>Projects </Heading></AnchorLink>
-				</Box>
-				<Box py='2' px='4'>
-					<AnchorLink href='#contact'> <Heading size='md'>Contact </Heading></AnchorLink>
-				</Box>
-				<Button leftIcon={<EmailIcon />} variant='solid' colorScheme='orange'>
-					<a href='/Resume.pdf'> <Heading size='md'> Resume  </Heading></a>
+
+				{/* Desktop Navigation */}
+				<Stack 
+					direction="row" 
+					spacing={6} 
+					align="center"
+					display={{ base: 'none', md: 'flex' }}
+				>
+					<NavLink href='#about'>About</NavLink>
+					<NavLink href='#experience'>Experience</NavLink>
+					<NavLink href='#projects'>Projects</NavLink>
+					<NavLink href='#contact'>Contact</NavLink>
+					<Button 
+						leftIcon={<EmailIcon />} 
+						variant='solid' 
+						colorScheme='orange'
+						size="md"
+					>
+						<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>Resume</Link>
+					</Button>
+				</Stack>
+
+				{/* Mobile Resume Button */}
+				<Button 
+					leftIcon={<EmailIcon />} 
+					variant='solid' 
+					colorScheme='orange'
+					size="sm"
+					ml={4}
+					display={{ base: 'flex', md: 'none' }}
+				>
+					<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>Resume</Link>
 				</Button>
 			</Flex>
+		</Box>
 	)
 }
 

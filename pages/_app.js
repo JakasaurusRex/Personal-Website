@@ -2,15 +2,24 @@
 import {ChakraProvider} from '@chakra-ui/react'
 import customTheme from '../styles/theme'
 import {Analytics} from '@vercel/analytics/react';
-
 import Head from 'next/head'
+import { useEffect } from 'react';
 
 function MyApp({Component, pageProps}) {
+	useEffect(() => {
+		// This ensures the app is fully mounted before any client-side rendering
+		if (typeof window !== 'undefined') {
+			const loader = document.getElementById('globalLoader');
+			if (loader)
+				loader.style.display = 'none';
+		}
+	}, []);
+
 	return (
-		<ChakraProvider resetCSS theme={customTheme}>
+		<ChakraProvider theme={customTheme}>
 			<Head>
-				<meta name="viewport" content = "width=device-width, initial-scale=1" />
-				<title> Jake's Personal Website </title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<title>Jake's Personal Website</title>
 				<link rel="shortcut icon" href="/images/favicon.ico" />
 				<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
