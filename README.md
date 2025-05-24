@@ -1,4 +1,4 @@
-# PersonalWebsitePart3
+# Personal Website
 
 Made this personal website in two days! Learned React.js and Next.js to make it. Used Chakra UI to implement the features on the website. 
 
