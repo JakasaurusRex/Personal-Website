@@ -18,6 +18,14 @@ import {
 //Creating an array for all the images in the slideshow
 const fadeImages = [
 	{
+		url: '/LatinGrad.png',
+		alt: 'Latin Grad'
+	},
+	{
+		url: '/CSGrad.png',
+		alt: 'CS Grad'
+	},
+	{
 		url: '/NewPFP.png',
 		alt: 'New PFP'
 	},
@@ -79,13 +87,13 @@ const Slideshow = () => {
 		return (
 			<Box 
 				className="slide-container" 
-				width="400px"  // Fixed square width
-				height="400px"  // Fixed square height
+				width={{ base: "100%", md: "400px" }}
+				aspectRatio="1"
 				borderRadius="lg"
 				overflow="hidden"
 				shadow="md"
 				position="relative"
-				margin="0 auto"  // Center the square
+				margin="0 auto"
 			>
 				<img 
 					src={fadeImages[0].url} 
@@ -104,13 +112,13 @@ const Slideshow = () => {
 	return (
 		<Box 
 			className="slide-container" 
-			width="400px"  // Fixed square width
-			height="400px"  // Fixed square height
+			width={{ base: "100%", md: "400px" }}
+			aspectRatio="1"
 			borderRadius="lg"
 			overflow="hidden"
 			shadow="md"
 			position="relative"
-			margin="0 auto"  // Center the square
+			margin="0 auto"
 		>
 			<Fade>
 				{fadeImages.map((fadeImage, index) => (
@@ -163,9 +171,9 @@ const About = () => {
 						align="start"
 					>
 						<Box 
-							width={{ base: "400px", md: "400px" }}  // Fixed square width
-							height="400px"  // Fixed square height
-							margin={{ base: "0 auto", md: "0" }}  // Center on mobile
+							width={{ base: "100%", md: "400px" }}
+							aspectRatio="1"
+							margin={{ base: "0 auto", md: "0" }}
 						>
 							<Slideshow />	
 						</Box>
