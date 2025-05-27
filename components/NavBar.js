@@ -90,6 +90,7 @@ const NavBar = () => {
 				</Stack>
 
 				{/* Mobile Resume Button */}
+				<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>
 				<Button 
 					leftIcon={<EmailIcon />} 
 					variant='solid' 
@@ -98,8 +99,9 @@ const NavBar = () => {
 					ml={4}
 					display={{ base: 'flex', md: 'none' }}
 				>
-					<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>Resume</Link>
+				Resume
 				</Button>
+				</Link>
 			</Flex>
 		</Box>
 	)
