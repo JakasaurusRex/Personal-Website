@@ -73,6 +73,14 @@ const NavBar = () => {
 						colorScheme='orange'
 						size="md"
 					>
+						<Link href='/CV.pdf' _hover={{ textDecoration: 'none' }}>Academic CV</Link>
+					</Button>
+					<Button 
+						leftIcon={<EmailIcon />} 
+						variant='solid' 
+						colorScheme='orange'
+						size="md"
+					>
 						<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>Resume</Link>
 					</Button>
 				</Stack>
