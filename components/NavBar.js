@@ -67,22 +67,26 @@ const NavBar = () => {
 					<NavLink href='#experience'>Experience</NavLink>
 					<NavLink href='#projects'>Projects</NavLink>
 					<NavLink href='#contact'>Contact</NavLink>
+					<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>
 					<Button 
 						leftIcon={<EmailIcon />} 
 						variant='solid' 
 						colorScheme='orange'
 						size="md"
 					>
-						<Link href='/CV.pdf' _hover={{ textDecoration: 'none' }}>Academic CV</Link>
+						Resume
 					</Button>
+					</Link>
+					<Link href='/CV.pdf' _hover={{ textDecoration: 'none' }}>
 					<Button 
 						leftIcon={<EmailIcon />} 
 						variant='solid' 
 						colorScheme='orange'
 						size="md"
 					>
-						<Link href='/Resume.pdf' _hover={{ textDecoration: 'none' }}>Resume</Link>
+						Academic CV
 					</Button>
+					</Link>
 				</Stack>
 
 				{/* Mobile Resume Button */}
