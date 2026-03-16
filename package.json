@@ -19,6 +19,9 @@
     "url": "https://github.com/JakasaurusRex/PersonalWebsitePart3/issues"
   },
   "homepage": "https://github.com/JakasaurusRex/PersonalWebsitePart3#readme",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.0",
     "@chakra-ui/react": "^2.0.2",
